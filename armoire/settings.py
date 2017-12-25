@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'armoire.urls'
@@ -72,6 +73,17 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'armoire.wsgi.application'
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'desarrolloeyetiv$armoire',
+        'USER': 'desarrolloeyetiv',
+        'PASSWORD': 'armoire2017',
+        'HOST': 'desarrolloeyetive.mysql.pythonanywhere-services.com',
+        'PORT': '',
+    }
+}
 
 
 # Password validation
